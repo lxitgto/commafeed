@@ -1,6 +1,6 @@
 FROM ubuntu:14.04
 
-RUN apt-get install -y add-apt-repository && add-apt-repository ppa:openjdk-r/ppa && apt-get update && apt-get install -y git vim g++ build-essential openjdk-8-jdk maven \
+RUN apt-get update && apt-get install -y add-apt-repository && add-apt-repository ppa:openjdk-r/ppa && apt-get update && apt-get install -y git vim g++ build-essential openjdk-8-jdk maven \
 && update-alternatives --config java \
 && update-alternatives --config javac \
 && mkdir /commafeed && mkdir /config && mkdir /data
