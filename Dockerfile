@@ -1,6 +1,7 @@
 FROM ubuntu:14.04
 
-RUN apt-get install -y software-properties-common python-software-properties \
+RUN apt-get update \
+&& apt-get install -y software-properties-common python-software-properties \
 && add-apt-repository ppa:openjdk-r/ppa \
 && apt-get update \
 && apt-get install -y git vim g++ build-essential openjdk-8-jdk maven \
