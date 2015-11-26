@@ -12,7 +12,7 @@ RUN apt-get update \
 WORKDIR /commafeed
 
 ENV COMMAFEED_GIT https://github.com/Athou/commafeed.git
-ENV COMMAFEED_VERSION 2.2.0
+ENV COMMAFEED_VERSION 2.1.0
 
 RUN git clone $COMMAFEED_GIT . && git checkout $COMMAFEED_VERSION && mvn clean package && cp /commafeed/config.dev.yml /config/config.yml
 
