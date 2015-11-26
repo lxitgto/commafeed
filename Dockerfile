@@ -3,7 +3,7 @@ FROM debian:wheezy
 RUN apt-get update && apt-get install -y git vim && mkdir /commafeed && mkdir /config && mkdir /data
 WORKDIR /commafeed
 
-RUN apt-get install -y build-essential openjdk-7-jdk maven
+RUN apt-get install -y build-essential openjdk-8-jdk maven
 
 ENV COMMAFEED_GIT https://github.com/Athou/commafeed.git
 ENV COMMAFEED_VERSION 2.1.0
