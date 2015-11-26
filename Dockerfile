@@ -1,14 +1,6 @@
-FROM ubuntu:14.04
+FROM lxitgto/docker-gitlab-runner-jdk-maven:jdk7
 
-RUN apt-get update \
-&& apt-get install -y python-software-properties \
-&& apt-get install -y software-properties-common  \
-&& add-apt-repository ppa:openjdk-r/ppa \
-&& apt-get update \
-&& apt-get install -y git vim g++ build-essential openjdk-8-jdk maven \
-&& update-alternatives --config java \
-&& update-alternatives --config javac \
-&& mkdir /commafeed && mkdir /config && mkdir /data
+RUN mkdir /commafeed && mkdir /config && mkdir /data
 WORKDIR /commafeed
 
 ENV COMMAFEED_GIT https://github.com/Athou/commafeed.git
